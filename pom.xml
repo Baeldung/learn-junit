@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <description>The 'Learn JUnit' Course: JUnit Basics</description>
+    <name>junit-basics</name>
+
+    <groupId>com.baeldung</groupId>
+    <artifactId>lju-junit-basics</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>lifecycle-methods-start</module>
+        <module>lifecycle-methods-end</module>
+        <module>mocking-start</module>
+        <module>mocking-end</module>
+        <module>assertions-start</module>
+        <module>assertions-end</module>
+        <module>exceptions-start</module>
+        <module>exceptions-end</module>
+        <module>advanced-assertions-start</module>
+        <module>advanced-assertions-end</module>
+        <module>test-naming-start</module>
+        <module>test-naming-end</module>
+        <module>disabling-tests-start</module>
+        <module>disabling-tests-end</module>
+    </modules>
+</project>

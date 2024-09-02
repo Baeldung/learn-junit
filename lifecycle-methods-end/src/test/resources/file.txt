@@ -1,0 +1,4 @@
+(1/4) This will help understand the test's lifecycle and how to handle resources.
+(2/4) It contains several lines.
+(3/4) And we'll read one line at a time.
+(4/4) This is the last line.
