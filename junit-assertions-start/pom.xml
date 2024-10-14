@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <description>Learn JUnit - Disabling Tests - Start</description>
+    <description>Learn JUnit - JUnit Assertions - Start</description>
 
     <groupId>com.baeldung</groupId>
-    <artifactId>disabling-tests-start</artifactId>
+    <artifactId>junit-assertions-start</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -17,14 +17,18 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj.version}</version>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
         <!-- logging -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -72,8 +76,8 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
         <junit-jupiter.version>5.10.1</junit-jupiter.version>
-        <assertj.version>3.24.2</assertj.version>
-
+        <mockito.version>5.11.0</mockito.version>
+        
         <logback.version>1.4.11</logback.version>
 
         <maven-surefire.version>3.2.2</maven-surefire.version>

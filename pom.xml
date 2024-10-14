@@ -16,12 +16,14 @@
         <module>lifecycle-methods-end</module>
         <module>mocking-start</module>
         <module>mocking-end</module>
-        <module>assertions-start</module>
-        <module>assertions-end</module>
+        <module>junit-assertions-start</module>
+        <module>junit-assertions-end</module>
         <module>exceptions-start</module>
         <module>exceptions-end</module>
-        <module>advanced-assertions-start</module>
-        <module>advanced-assertions-end</module>
+        <module>advanced-assertions-hamcrest-start</module>
+        <module>advanced-assertions-hamcrest-end</module>
+        <module>advanced-assertions-assertj-start</module>
+        <module>advanced-assertions-assertj-end</module>
         <module>test-naming-start</module>
         <module>test-naming-end</module>
         <module>disabling-tests-start</module>
