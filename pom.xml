@@ -18,5 +18,7 @@
         <module>advanced-assertions-hamcrest-end</module>
         <module>advanced-assertions-assertj-start</module>
         <module>advanced-assertions-assertj-end</module>
+        <module>group-assertions-start</module>
+        <module>group-assertions-end</module>
     </modules>
 </project>
