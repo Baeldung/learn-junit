@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <description>The 'Learn JUnit' Course: Advanced Test Types</description>
+    <name>advanced-test-types</name>
+
+    <groupId>com.baeldung</groupId>
+    <artifactId>lju-advanced-test-types</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>parameterized-tests-start</module>
+        <module>parameterized-tests-end</module>
+        <module>dynamic-tests-start</module>
+        <module>dynamic-tests-end</module>
+    </modules>
+</project>
