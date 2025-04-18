@@ -51,7 +51,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRertrieved() {
+    public void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRetrieved() {
         // when
         Optional<Campaign> retrievedCampaign = campaignRepository.findById(99L);
 
