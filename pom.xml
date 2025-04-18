@@ -12,9 +12,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>parallel-execution-start</module>
-        <module>parallel-execution-end</module>
         <module>tagging-and-filtering-start</module>
         <module>tagging-and-filtering-end</module>
+        <module>test-suites-start</module>
+        <module>test-suites-end</module>
+        <module>conditional-test-execution-start</module>
+        <module>conditional-test-execution-end</module>
+        <module>parallel-execution-start</module>
+        <module>parallel-execution-end</module>
     </modules>
 </project>

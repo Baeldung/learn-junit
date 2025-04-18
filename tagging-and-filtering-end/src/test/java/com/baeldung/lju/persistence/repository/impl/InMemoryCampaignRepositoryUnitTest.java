@@ -17,7 +17,7 @@ import com.baeldung.lju.domain.model.Campaign;
 class InMemoryCampaignRepositoryUnitTest {
 
     @Test
-    public void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRertrieved() {
+    public void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRetrieved() {
         // given 
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 
@@ -29,7 +29,7 @@ class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenExistingCampaign_whenFindById_thenCampaignRertrieved() {
+    public void givenExistingCampaign_whenFindById_thenCampaignRetrieved() {
         // given 
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
@@ -43,7 +43,7 @@ class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRertrieved() {
+    public void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRetrieved() {
         // given 
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
