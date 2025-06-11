@@ -1,10 +1,11 @@
 package com.baeldung.lju.persistence.repository.impl;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
 
 import com.baeldung.lju.domain.model.Campaign;
-import org.junit.jupiter.api.RepetitionInfo;
 
 class InMemoryCampaignRepositoryRepeatedUnitTest {
     @RepeatedTest(5)
@@ -14,7 +15,7 @@ class InMemoryCampaignRepositoryRepeatedUnitTest {
         Campaign campaign = new Campaign("TEST-CODE", "Test Campaign", "Repeated test scenario");
         Campaign savedCampaign = repository.save(campaign);
 
-        Assertions.assertNotNull(savedCampaign.getId(),
+        assertNotNull(savedCampaign.getId(),
                 "Campaign ID should be assigned in repeated test");
     }
 
@@ -25,7 +26,7 @@ class InMemoryCampaignRepositoryRepeatedUnitTest {
         Campaign campaign = new Campaign("TEST-CODE", "Test Campaign", "Repeated test scenario");
         Campaign savedCampaign = repository.save(campaign);
 
-        Assertions.assertNotNull(savedCampaign.getId(),
+        assertNotNull(savedCampaign.getId(),
                 "Campaign ID should be assigned in repeated test");
     }
 
@@ -38,7 +39,7 @@ class InMemoryCampaignRepositoryRepeatedUnitTest {
         Campaign campaign = new Campaign("TEST-CODE", "Test Campaign", "Repeated test scenario");
         Campaign savedCampaign = repository.save(campaign);
 
-        Assertions.assertNotNull(savedCampaign.getId(),
+        assertNotNull(savedCampaign.getId(),
                 "Campaign ID should be assigned in repeated test");
     }
 
@@ -52,9 +53,9 @@ class InMemoryCampaignRepositoryRepeatedUnitTest {
         Campaign savedCampaign = repository.save(campaign);
 
         if (repetitionInfo.getCurrentRepetition() % 2 == 0) {
-            Assertions.fail("This repetition is a flaky one!");
+            fail("This repetition is a flaky one!");
         } else {
-            Assertions.assertNotNull(savedCampaign.getId(),
+            assertNotNull(savedCampaign.getId(),
                     "Campaign ID should be assigned in repeated test");
         }
     }
