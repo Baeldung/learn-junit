@@ -1,11 +1,11 @@
 package com.baeldung.lju.service.reports;
 
 import static java.util.Collections.singletonList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 import java.util.Map;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -26,7 +26,7 @@ class SimpleMapReportBuilderUnitTest {
         reportBuilder.addCampaignsData(singletonList(task));
 
         Map<String, Object> report = reportBuilder.obtainReport();
-        Assertions.assertEquals(1L, report.get("Total Campaigns Count"));
+        assertEquals(1L, report.get("Total Campaigns Count"));
     }
 
 }
