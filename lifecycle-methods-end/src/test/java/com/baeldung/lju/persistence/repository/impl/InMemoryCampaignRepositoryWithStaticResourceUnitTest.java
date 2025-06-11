@@ -15,14 +15,14 @@ import org.slf4j.LoggerFactory;
 import com.baeldung.lju.LjuApp;
 import com.baeldung.lju.domain.model.Campaign;
 
-public class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
+class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
 
     static Logger logger = LoggerFactory.getLogger(LjuApp.class);
 
     static InMemoryCampaignRepository staticCampaignRepository;
 
     @BeforeAll
-    public static void setupStaticDataSource() {
+    static void setupStaticDataSource() {
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
         staticCampaignRepository = new InMemoryCampaignRepository(new HashSet<>(Arrays.asList(existingCampaign)));
@@ -33,7 +33,7 @@ public class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
     }
 
     @AfterAll
-    public static void staticCleanup() {
+    static void staticCleanup() {
         logger.info("STATIC @AfterAll cleanup");
         logger.info("Repository reference id: {}", System.identityHashCode(staticCampaignRepository));
         logger.info("Data Source has {} campaigns", staticCampaignRepository.findAll()
@@ -41,7 +41,7 @@ public class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
     }
 
     @Test
-    public void givenStaticDatasource_whenFindById_thenCampaignRetrieved() {
+    void givenStaticDatasource_whenFindById_thenCampaignRetrieved() {
         // when
         Optional<Campaign> retrievedCampaign = staticCampaignRepository.findById(1L);
 
@@ -51,7 +51,7 @@ public class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
     }
 
     @Test
-    public void givenStaticDatasource_whenFindByNonExistingId_thenNoCampaignRetrieved() {
+    void givenStaticDatasource_whenFindByNonExistingId_thenNoCampaignRetrieved() {
         // when
         Optional<Campaign> retrievedCampaign = staticCampaignRepository.findById(99L);
 
@@ -60,7 +60,7 @@ public class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
     }
 
     @Test
-    public void givenStaticDatasource_whenSave_thenCampaignIsAssignedId() {
+    void givenStaticDatasource_whenSave_thenCampaignIsAssignedId() {
         // when
         Campaign newCampaign = new Campaign("C-NEW-CODE", "New Campaign", "New Campaign Description");
         Campaign savedCampaign = staticCampaignRepository.save(newCampaign);

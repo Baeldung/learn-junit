@@ -21,11 +21,11 @@ import com.baeldung.lju.domain.model.Campaign;
 // @DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
 // @IndicativeSentencesGeneration(generator = DisplayNameGenerator.ReplaceUnderscores.class, separator = " - ")
 @DisplayNameGeneration(CustomDisplayNameGenerator.class)
-public class InMemoryCampaignRepositoryUnitTest {
+class InMemoryCampaignRepositoryUnitTest {
 
     @Test
     @DisplayName("No data scenario: Given an empty data source, " + "when finding all campaigns, then an empty list is retrieved")
-    public void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRetrieved() {
+    void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRetrieved() {
         // given 
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 
@@ -37,7 +37,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenExistingCampaign_whenFindById_thenCampaignRetrieved() {
+    void givenExistingCampaign_whenFindById_thenCampaignRetrieved() {
         // given 
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
@@ -51,7 +51,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRetrieved() {
+    void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRetrieved() {
         // given 
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
@@ -65,7 +65,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenEmptyDataSource_whenSave_thenCampaignIsAssignedId() {
+    void givenEmptyDataSource_whenSave_thenCampaignIsAssignedId() {
         // given 
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 

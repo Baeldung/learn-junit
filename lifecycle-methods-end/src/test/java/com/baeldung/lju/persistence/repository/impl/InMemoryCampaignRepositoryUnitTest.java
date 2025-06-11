@@ -15,14 +15,14 @@ import org.slf4j.LoggerFactory;
 
 import com.baeldung.lju.domain.model.Campaign;
 
-public class InMemoryCampaignRepositoryUnitTest {
+class InMemoryCampaignRepositoryUnitTest {
 
     final Logger logger = LoggerFactory.getLogger(InMemoryCampaignRepositoryUnitTest.class);
 
     InMemoryCampaignRepository campaignRepository;
 
     @BeforeEach
-    public void setupDataSource() {
+    void setupDataSource() {
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
         campaignRepository = new InMemoryCampaignRepository(new HashSet<>(Arrays.asList(existingCampaign)));
@@ -33,7 +33,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @AfterEach
-    public void cleanup() {
+    void cleanup() {
         logger.info("@AfterEach cleanup");
         logger.info("Repository reference id: {}", System.identityHashCode(campaignRepository));
         logger.info("Data Source has {} campaigns", campaignRepository.findAll()
@@ -41,7 +41,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenExistingCampaign_whenFindById_thenCampaignRetrieved() {
+    void givenExistingCampaign_whenFindById_thenCampaignRetrieved() {
         // when
         Optional<Campaign> retrievedCampaign = campaignRepository.findById(1L);
 
@@ -51,7 +51,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRetrieved() {
+    void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRetrieved() {
         // when
         Optional<Campaign> retrievedCampaign = campaignRepository.findById(99L);
 
@@ -61,7 +61,7 @@ public class InMemoryCampaignRepositoryUnitTest {
 
     // Overriding data source for specific scenario
     @Test
-    public void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRetrieved() {
+    void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRetrieved() {
         // given
         campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 
@@ -73,7 +73,7 @@ public class InMemoryCampaignRepositoryUnitTest {
     }
 
     @Test
-    public void givenEmptyDataSource_whenSave_thenCampaignIsAssignedId() {
+    void givenEmptyDataSource_whenSave_thenCampaignIsAssignedId() {
         // when
         Campaign newCampaign = new Campaign("C-NEW-CODE", "New Campaign", "New Campaign Description");
         Campaign savedCampaign = campaignRepository.save(newCampaign);

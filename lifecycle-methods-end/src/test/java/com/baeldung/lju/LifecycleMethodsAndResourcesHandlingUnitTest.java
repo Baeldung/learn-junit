@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LifecycleMethodsAndResourcesHandlingUnitTest {
+class LifecycleMethodsAndResourcesHandlingUnitTest {
 
     final static Logger logger = LoggerFactory.getLogger(LifecycleMethodsAndResourcesHandlingUnitTest.class);
     static BufferedReader fileReader;
@@ -20,7 +20,7 @@ public class LifecycleMethodsAndResourcesHandlingUnitTest {
     //    BufferedReader fileReader;
 
     @BeforeAll
-    static public void setupResource() throws Exception {
+    static void setupResource() throws Exception {
         InputStream fileStream = LifecycleMethodsAndResourcesHandlingUnitTest.class.getClassLoader()
             .getResourceAsStream("file.txt");
         fileReader = new BufferedReader(new InputStreamReader(fileStream));
@@ -29,7 +29,7 @@ public class LifecycleMethodsAndResourcesHandlingUnitTest {
     }
 
     /* @BeforeEach
-    public void setupUsingResource() throws Exception {
+    void setupUsingResource() throws Exception {
         InputStream fileStream = LifecycleMethodsAndResourcesHandlingUnitTest.class.getClassLoader()
             .getResourceAsStream("file.txt");
         fileReader = new BufferedReader(new InputStreamReader(fileStream));
@@ -38,26 +38,26 @@ public class LifecycleMethodsAndResourcesHandlingUnitTest {
     } */
 
     @AfterEach
-    public void cleanupResource() throws Exception {
+    void cleanupResource() throws Exception {
         //        fileReader.close();
         //        logger.info("fileReader is closed");
     }
 
     @AfterAll
-    static public void cleanupStaticResource() throws Exception {
+    static void cleanupStaticResource() throws Exception {
         fileReader.close();
         logger.info("static fileReader is closed");
     }
 
     @Test
-    public void givenOpenResource_whenReadLines1_thenLineIsLogged() throws Exception {
+    void givenOpenResource_whenReadLines1_thenLineIsLogged() throws Exception {
         for (int i = 0; i < 2; i++) {
             logger.info(fileReader.readLine());
         }
     }
 
     @Test
-    public void givenOpenResource_whenReadLines2_thenLineIsLogged() throws Exception {
+    void givenOpenResource_whenReadLines2_thenLineIsLogged() throws Exception {
         for (int i = 0; i < 2; i++) {
             logger.info(fileReader.readLine());
         }

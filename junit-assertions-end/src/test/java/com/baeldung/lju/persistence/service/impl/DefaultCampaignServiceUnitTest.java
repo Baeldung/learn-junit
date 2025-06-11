@@ -26,7 +26,7 @@ import com.baeldung.lju.service.CampaignService;
 import com.baeldung.lju.service.impl.DefaultCampaignService;
 
 @ExtendWith(MockitoExtension.class)
-public class DefaultCampaignServiceUnitTest {
+class DefaultCampaignServiceUnitTest {
 
     @Mock
     CampaignRepository campaignRepository;
@@ -34,12 +34,12 @@ public class DefaultCampaignServiceUnitTest {
     CampaignService campaignService;
 
     @BeforeEach
-    public void setupDataSource() {
+    void setupDataSource() {
         campaignService = new DefaultCampaignService(campaignRepository);
     }
 
     @Test
-    public void givenMockedPersistedCampaign_whenFindById_thenCodeEqualsAndNameNotEquals() {
+    void givenMockedPersistedCampaign_whenFindById_thenCodeEqualsAndNameNotEquals() {
         //given
         Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         when(campaignRepository.findById(3L)).thenReturn(Optional.of(mockedCampaign));
@@ -62,7 +62,7 @@ public class DefaultCampaignServiceUnitTest {
     }
 
     @Test
-    public void givenMockedPersistedCampaign_whenFindById_thenCampaignIsTheSameAsMockedAndDifferentFromExpected() {
+    void givenMockedPersistedCampaign_whenFindById_thenCampaignIsTheSameAsMockedAndDifferentFromExpected() {
         //given
         Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         when(campaignRepository.findById(3L)).thenReturn(Optional.of(mockedCampaign));
@@ -80,7 +80,7 @@ public class DefaultCampaignServiceUnitTest {
     }
 
     @Test
-    public void givenMockedPersistedCampaigns_whenFindAll_thenCampaignsEquals() {
+    void givenMockedPersistedCampaigns_whenFindAll_thenCampaignsEquals() {
         //given
         Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         when(campaignRepository.findAll()).thenReturn(List.of(mockedCampaign));
@@ -93,7 +93,7 @@ public class DefaultCampaignServiceUnitTest {
     }
 
     @Test
-    public void givenMockedPersistedCampaign_whenFindById_thenDescriptionIsBlank() {
+    void givenMockedPersistedCampaign_whenFindById_thenDescriptionIsBlank() {
         //given
         Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "");
         when(campaignRepository.findById(3L)).thenReturn(Optional.of(mockedCampaign));
@@ -108,7 +108,7 @@ public class DefaultCampaignServiceUnitTest {
     }
 
     @Test
-    public void givenMockedPersistedCampaign_whenFindById_thenIsClosedFalse() {
+    void givenMockedPersistedCampaign_whenFindById_thenIsClosedFalse() {
         //given
         Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         when(campaignRepository.findById(3L)).thenReturn(Optional.of(mockedCampaign));
@@ -122,7 +122,7 @@ public class DefaultCampaignServiceUnitTest {
     }
 
     @Test
-    public void givenMockedPersistedCampaign_whenFindById_thenIdNull() {
+    void givenMockedPersistedCampaign_whenFindById_thenIdNull() {
         //given
         Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         when(campaignRepository.findById(3L)).thenReturn(Optional.of(mockedCampaign));
@@ -136,7 +136,7 @@ public class DefaultCampaignServiceUnitTest {
     }
 
     @Test
-    public void givenMockedPersistedCampaign_whenFindById_thenCodeNotNull() {
+    void givenMockedPersistedCampaign_whenFindById_thenCodeNotNull() {
         //given
         Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         when(campaignRepository.findById(3L)).thenReturn(Optional.of(mockedCampaign));
