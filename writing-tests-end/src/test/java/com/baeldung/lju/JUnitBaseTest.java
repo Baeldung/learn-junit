@@ -3,10 +3,10 @@ package com.baeldung.lju;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class JUnitBaseTest {
+class JUnitBaseTest {
 
     @Test
-    public void genericTest() {
+    void genericTest() {
         int a = 2;
         int b = 3;
 
