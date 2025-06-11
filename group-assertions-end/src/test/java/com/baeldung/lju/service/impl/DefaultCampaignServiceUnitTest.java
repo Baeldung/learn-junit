@@ -7,12 +7,12 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DefaultCampaignServiceUnitTest {
+class DefaultCampaignServiceUnitTest {
 
     private DefaultCampaignService service = new DefaultCampaignService();
     
     @Test
-    public void givenCampaigns_whenFindCampaignById_thenReturnCampaign_andAssertAll() {
+    void givenCampaigns_whenFindCampaignById_thenReturnCampaign_andAssertAll() {
         //save campaign for the test
         Campaign campaign = new Campaign("CA-123", "Social Media Campaign", "Campaign through FB, Twitter");
         var created = service.create(campaign);
