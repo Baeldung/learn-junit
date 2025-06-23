@@ -20,5 +20,7 @@
         <module>conditional-test-execution-end</module>
         <module>parallel-execution-start</module>
         <module>parallel-execution-end</module>
+        <module>test-execution-order-start</module>
+        <module>test-execution-order-end</module>
     </modules>
 </project>
