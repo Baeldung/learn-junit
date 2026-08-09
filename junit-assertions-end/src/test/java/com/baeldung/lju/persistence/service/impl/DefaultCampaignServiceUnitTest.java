@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Optional;
 
@@ -82,14 +83,15 @@ class DefaultCampaignServiceUnitTest {
     @Test
     void givenMockedPersistedCampaigns_whenFindAll_thenCampaignsEquals() {
         //given
-        Campaign mockedCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
-        when(campaignRepository.findAll()).thenReturn(List.of(mockedCampaign));
+        Campaign mockedCampaign1 = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
+        Campaign mockedCampaign2 = new Campaign("C-2-CODE", "Campaign 2", "Campaign 2 Description");
+        when(campaignRepository.findAll()).thenReturn(List.of(mockedCampaign1, mockedCampaign2));
 
         // when
         List<Campaign> campaigns = campaignService.findCampaigns();
 
         // then
-        assertIterableEquals(List.of(mockedCampaign), campaigns);
+        assertIterableEquals(new LinkedHashSet<>(List.of(mockedCampaign1, mockedCampaign2)), campaigns);
     }
 
     @Test
