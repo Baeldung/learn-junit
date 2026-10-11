@@ -1,6 +1,6 @@
 package com.baeldung.lju.persistence.repository.impl;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -32,7 +32,6 @@ class InMemoryWorkerRepositoryUnitTest {
         Worker createdWorker = workerRepository.save(worker2);
 
         // then
-        assertThat(createdWorker).extracting(Worker::getId)
-            .isEqualTo(2L);
+        assertEquals(2L, createdWorker.getId());
     }
 }
