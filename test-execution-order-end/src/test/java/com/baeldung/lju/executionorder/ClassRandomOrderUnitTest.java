@@ -11,8 +11,8 @@ class ClassRandomOrderUnitTest {
     @Nested
     class One {
         @Test
-        void testOne() {
-            System.out.println("Running testOne");
+        void whenRunningExampleOne_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleOne_thenObserveConfiguredOrder");
             Assertions.assertTrue(counter.getAndIncrement() <= 3);
         }
     }
@@ -20,8 +20,8 @@ class ClassRandomOrderUnitTest {
     @Nested
     class Two {
         @Test
-        void testTwo() {
-            System.out.println("Running testTwo");
+        void whenRunningExampleTwo_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleTwo_thenObserveConfiguredOrder");
             Assertions.assertTrue(counter.getAndIncrement() <= 3);
         }
     }
@@ -29,8 +29,8 @@ class ClassRandomOrderUnitTest {
     @Nested
     class Three {
         @Test
-        void testThree() {
-            System.out.println("Running testThree");
+        void whenRunningExampleThree_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleThree_thenObserveConfiguredOrder");
             Assertions.assertTrue(counter.getAndIncrement() <= 3);
         }
     }

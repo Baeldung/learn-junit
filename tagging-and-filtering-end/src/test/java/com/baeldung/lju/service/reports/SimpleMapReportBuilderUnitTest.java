@@ -17,7 +17,7 @@ class SimpleMapReportBuilderUnitTest {
 
     @Test
     @Tag("service")
-    @Tag("reporting")
+    @Tag("reports")
     void givenSimpleReportBuilder_whenAddingCampaignData_thenTotalCampaignsCountIsCorrect() {
         SimpleMapReportBuilder reportBuilder = new SimpleMapReportBuilder();
         Campaign campaign = new Campaign("CODE-1", "Campaign Name", "Test campaign description");

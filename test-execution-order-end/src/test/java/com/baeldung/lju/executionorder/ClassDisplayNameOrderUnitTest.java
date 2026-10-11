@@ -12,8 +12,8 @@ class ClassDisplayNameOrderUnitTest {
     @DisplayName("1. Class One")
     class One {
         @Test
-        void testOne() {
-            System.out.println("Running testOne");
+        void whenRunningExampleOne_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleOne_thenObserveConfiguredOrder");
             Assertions.assertEquals(1, counter.getAndIncrement());
         }
     }
@@ -22,8 +22,8 @@ class ClassDisplayNameOrderUnitTest {
     @DisplayName("2. Class Two")
     class Two {
         @Test
-        void testTwo() {
-            System.out.println("Running testTwo");
+        void whenRunningExampleTwo_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleTwo_thenObserveConfiguredOrder");
             Assertions.assertEquals(2, counter.getAndIncrement());
         }
     }
@@ -32,8 +32,8 @@ class ClassDisplayNameOrderUnitTest {
     @DisplayName("3. Class Three")
     class Three {
         @Test
-        void testThree() {
-            System.out.println("Running testThree");
+        void whenRunningExampleThree_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleThree_thenObserveConfiguredOrder");
             Assertions.assertEquals(3, counter.getAndIncrement());
         }
     }

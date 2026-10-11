@@ -5,7 +5,7 @@ import com.baeldung.lju.junit.IntegrationTest;
 class ApplicationIntegrationTest {
 
     @IntegrationTest
-    void mainAppMethodIntegrationTest() {
+    void whenRunningApplication_thenCompleteWithoutException() {
         LjuApp.main(new String[] {});
     }
 

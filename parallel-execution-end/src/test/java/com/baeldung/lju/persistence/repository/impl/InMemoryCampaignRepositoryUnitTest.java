@@ -16,7 +16,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import com.baeldung.lju.domain.model.Campaign;
 
-@Execution(ExecutionMode.CONCURRENT)
+@Execution(ExecutionMode.SAME_THREAD)
 class InMemoryCampaignRepositoryUnitTest {
 
     @BeforeEach

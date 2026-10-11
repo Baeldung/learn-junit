@@ -18,6 +18,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- logging -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -32,10 +38,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire.version}</version>
-<!--                <configuration>-->
-<!--                    <groups>campaigns|reports</groups>-->
-<!--                    <excludedGroups>integration|persistence</excludedGroups>-->
-<!--                </configuration>-->
+                <configuration>
+                    <groups>campaigns|reports</groups>
+                    <excludedGroups>integration|persistence</excludedGroups>
+                </configuration>
             </plugin>
         </plugins>
     </build>

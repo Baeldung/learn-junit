@@ -12,8 +12,8 @@ class ClassOrderAnnotationUnitTest {
     @Order(3)
     class One {
         @Test
-        void testOne() {
-            System.out.println("Running testOne, order 3");
+        void whenRunningExampleOne_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleOne_thenObserveConfiguredOrder, order 3");
             Assertions.assertEquals(3, counter.getAndIncrement());
         }
     }
@@ -22,8 +22,8 @@ class ClassOrderAnnotationUnitTest {
     @Order(1)
     class Two {
         @Test
-        void testTwo() {
-            System.out.println("Running testTwo, order 1");
+        void whenRunningExampleTwo_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleTwo_thenObserveConfiguredOrder, order 1");
             Assertions.assertEquals(1, counter.getAndIncrement());
         }
     }
@@ -32,8 +32,8 @@ class ClassOrderAnnotationUnitTest {
     @Order(2)
     class Three {
         @Test
-        void testThree() {
-            System.out.println("Running testThree, order 2");
+        void whenRunningExampleThree_thenObserveConfiguredOrder() {
+            System.out.println("Running whenRunningExampleThree_thenObserveConfiguredOrder, order 2");
             Assertions.assertEquals(2, counter.getAndIncrement());
         }
     }

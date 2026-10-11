@@ -11,22 +11,22 @@ class MethodDisplayNameOrderUnitTest {
 
     @Test
     @DisplayName("1. Test One")
-    void testOne() {
-        System.out.println("Running testOne");
+    void whenRunningExampleOne_thenObserveConfiguredOrder() {
+        System.out.println("Running whenRunningExampleOne_thenObserveConfiguredOrder");
         Assertions.assertEquals(1, counter.getAndIncrement());
     }
 
     @Test
     @DisplayName("2. Test Two")
-    void testTwo() {
-        System.out.println("Running testTwo");
+    void whenRunningExampleTwo_thenObserveConfiguredOrder() {
+        System.out.println("Running whenRunningExampleTwo_thenObserveConfiguredOrder");
         Assertions.assertEquals(2, counter.getAndIncrement());
     }
 
     @Test
     @DisplayName("3. Test Three")
-    void testThree() {
-        System.out.println("Running testThree");
+    void whenRunningExampleThree_thenObserveConfiguredOrder() {
+        System.out.println("Running whenRunningExampleThree_thenObserveConfiguredOrder");
         Assertions.assertEquals(3, counter.getAndIncrement());
     }
 }
