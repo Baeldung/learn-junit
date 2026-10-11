@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <description>Learn JUnit - Advanced Assertions - Assertj - Start</description>
+    <description>Learn JUnit - Advanced Assertions - AssertJ - Start</description>
 
     <groupId>com.baeldung</groupId>
     <artifactId>advanced-assertions-assertj-start</artifactId>
@@ -69,5 +69,6 @@
         <logback.version>1.4.11</logback.version>
 
         <maven-surefire.version>3.2.2</maven-surefire.version>
+        <assertj.version>3.25.3</assertj.version>
     </properties>
 </project>

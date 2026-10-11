@@ -69,5 +69,6 @@
         <logback.version>1.4.11</logback.version>
 
         <maven-surefire.version>3.2.2</maven-surefire.version>
+        <hamcrest.version>2.2</hamcrest.version>
     </properties>
 </project>

@@ -17,18 +17,6 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-junit-jupiter</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -90,7 +78,6 @@
         <logback.version>1.4.11</logback.version>
 
         <maven-surefire.version>3.2.2</maven-surefire.version>
-        <mockito.version>5.11.0</mockito.version>
 
         <hamcrest.version>2.2</hamcrest.version>
     </properties>

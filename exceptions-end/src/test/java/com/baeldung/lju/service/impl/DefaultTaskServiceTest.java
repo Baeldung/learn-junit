@@ -33,6 +33,6 @@ class DefaultTaskServiceTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> taskService.create(newTask));
 
         // then
-        assertEquals(exception.getMessage(), "Can't create Task with assigned 'id'");
+        assertEquals("Can't create Task with assigned 'id'", exception.getMessage());
     }
 }
