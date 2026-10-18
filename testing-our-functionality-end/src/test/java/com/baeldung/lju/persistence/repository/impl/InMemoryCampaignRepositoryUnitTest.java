@@ -59,7 +59,7 @@ class InMemoryCampaignRepositoryUnitTest {
         InMemoryCampaignRepository repository = new InMemoryCampaignRepository(new HashSet<>());
 
         // when
-        Campaign campaign= new Campaign("P-NEW-CODE", "New Campaign", "New Campaign Description");
+        Campaign campaign = new Campaign("P-NEW-CODE", "New Campaign", "New Campaign Description");
         repository.save(campaign);
 
         // then
