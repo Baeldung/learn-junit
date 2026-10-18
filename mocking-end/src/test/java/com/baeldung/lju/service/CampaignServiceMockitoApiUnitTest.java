@@ -65,7 +65,7 @@ class CampaignServiceMockitoApiUnitTest {
         CampaignService service = new DefaultCampaignService(repository);
 
         Campaign testCampaign = new Campaign("test-code", "test-name", "test-description");
-        Mockito.when(repository.findById(Mockito.anyLong())) .thenReturn(Optional.of(testCampaign));
+        Mockito.when(repository.findById(Mockito.anyLong())).thenReturn(Optional.of(testCampaign));
 
         // when
         Optional<Campaign> result = service.closeCampaign(99L);

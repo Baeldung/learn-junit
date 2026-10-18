@@ -1,6 +1,7 @@
 package com.baeldung.lju;
 
 import java.lang.reflect.Method;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.DisplayNameGenerator;
 public class CustomDisplayNameGenerator extends DisplayNameGenerator.Standard {
 
     @Override
-    public String generateDisplayNameForMethod(Class<?> testClass, Method testMethod) {
+    public String generateDisplayNameForMethod(List<Class<?>> enclosingInstanceTypes, Class<?> testClass, Method testMethod) {
         String methodName = testMethod.getName();
         return convertToReadableFormat(methodName);
     }
@@ -35,4 +36,3 @@ public class CustomDisplayNameGenerator extends DisplayNameGenerator.Standard {
         return displayName.toString();
     }
 }
-

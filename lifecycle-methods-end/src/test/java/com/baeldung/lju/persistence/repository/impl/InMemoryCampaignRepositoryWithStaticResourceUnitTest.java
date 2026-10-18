@@ -29,7 +29,7 @@ class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
         logger.info("STATIC @BeforeAll STATIC Initialized Data Source");
         logger.info("Repository reference id: {}", System.identityHashCode(staticCampaignRepository));
         logger.info("Data Source has {} campaigns", staticCampaignRepository.findAll()
-          .size());
+            .size());
     }
 
     @AfterAll
@@ -37,7 +37,7 @@ class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
         logger.info("STATIC @AfterAll cleanup");
         logger.info("Repository reference id: {}", System.identityHashCode(staticCampaignRepository));
         logger.info("Data Source has {} campaigns", staticCampaignRepository.findAll()
-          .size());
+            .size());
     }
 
     @Test
@@ -47,7 +47,7 @@ class InMemoryCampaignRepositoryWithStaticResourceUnitTest {
 
         // then
         Assertions.assertEquals("C-1-CODE", retrievedCampaign.get()
-          .getCode());
+            .getCode());
     }
 
     @Test

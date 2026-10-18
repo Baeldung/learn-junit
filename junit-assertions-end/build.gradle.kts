@@ -17,7 +17,7 @@ dependencies {
 group = "com.baeldung"
 version = "1.0.0"
 description = "junit-assertions-end"
-java.sourceCompatibility = JavaVersion.VERSION_21
+java.sourceCompatibility = JavaVersion.VERSION_25
 
 tasks.withType<JavaCompile>() {
     options.encoding = "UTF-8"

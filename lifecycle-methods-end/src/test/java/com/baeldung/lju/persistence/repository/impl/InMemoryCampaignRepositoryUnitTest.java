@@ -29,7 +29,7 @@ class InMemoryCampaignRepositoryUnitTest {
         logger.info("@BeforeEach - Initialized Data Source");
         logger.info("Repository reference id: {}", System.identityHashCode(campaignRepository));
         logger.info("Data Source has {} campaigns", campaignRepository.findAll()
-          .size());
+            .size());
     }
 
     @AfterEach
@@ -37,7 +37,7 @@ class InMemoryCampaignRepositoryUnitTest {
         logger.info("@AfterEach cleanup");
         logger.info("Repository reference id: {}", System.identityHashCode(campaignRepository));
         logger.info("Data Source has {} campaigns", campaignRepository.findAll()
-          .size());
+            .size());
     }
 
     @Test
@@ -47,7 +47,7 @@ class InMemoryCampaignRepositoryUnitTest {
 
         // then
         Assertions.assertEquals("C-1-CODE", retrievedCampaign.get()
-          .getCode());
+            .getCode());
     }
 
     @Test

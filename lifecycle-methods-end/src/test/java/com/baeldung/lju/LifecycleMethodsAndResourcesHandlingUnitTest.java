@@ -17,7 +17,7 @@ class LifecycleMethodsAndResourcesHandlingUnitTest {
     final static Logger logger = LoggerFactory.getLogger(LifecycleMethodsAndResourcesHandlingUnitTest.class);
     static BufferedReader fileReader;
 
-    //    BufferedReader fileReader;
+    // BufferedReader fileReader;
 
     @BeforeAll
     static void setupResource() throws Exception {
@@ -28,19 +28,20 @@ class LifecycleMethodsAndResourcesHandlingUnitTest {
         logger.info("static fileReader is ready: {}", fileReader.ready());
     }
 
-    /* @BeforeEach
-    void setupUsingResource() throws Exception {
-        InputStream fileStream = LifecycleMethodsAndResourcesHandlingUnitTest.class.getClassLoader()
-            .getResourceAsStream("file.txt");
-        fileReader = new BufferedReader(new InputStreamReader(fileStream));
-    
-        logger.info("fileReader is ready: {}", fileReader.ready());
-    } */
+    /*
+     * @BeforeEach void setupUsingResource() throws Exception { InputStream
+     * fileStream =
+     * LifecycleMethodsAndResourcesHandlingUnitTest.class.getClassLoader()
+     * .getResourceAsStream("file.txt"); fileReader = new BufferedReader(new
+     * InputStreamReader(fileStream));
+     * 
+     * logger.info("fileReader is ready: {}", fileReader.ready()); }
+     */
 
     @AfterEach
     void cleanupResource() throws Exception {
-        //        fileReader.close();
-        //        logger.info("fileReader is closed");
+        // fileReader.close();
+        // logger.info("fileReader is closed");
     }
 
     @AfterAll
