@@ -21,7 +21,7 @@ class InMemoryCampaignRepositoryUnitTest {
     @Test
     @EnabledIfEnvironmentVariable(named = "MY_ENV_VARIABLE", matches = "test")
     void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRetrieved() {
-        // given 
+        // given
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 
         // when
@@ -34,7 +34,7 @@ class InMemoryCampaignRepositoryUnitTest {
     @Test
     @DisabledIfSystemProperty(named = "my.system.property", matches = "test")
     void givenExistingCampaign_whenFindById_thenCampaignRetrieved() {
-        // given 
+        // given
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>(Arrays.asList(existingCampaign)));
@@ -49,7 +49,7 @@ class InMemoryCampaignRepositoryUnitTest {
     @Test
     @EnabledIf("com.baeldung.lju.IsWeekendUtility#isWeekend")
     void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRetrieved() {
-        // given 
+        // given
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>(Arrays.asList(existingCampaign)));
@@ -64,7 +64,7 @@ class InMemoryCampaignRepositoryUnitTest {
     @Test
     @EnabledOnWeekends
     void givenEmptyDataSource_whenSave_thenCampaignIsAssignedId() {
-        // given 
+        // given
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 
         // when

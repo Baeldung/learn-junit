@@ -6,7 +6,7 @@ import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.JRE;
 import org.junit.jupiter.api.condition.OS;
 
-@EnabledOnJre(JRE.JAVA_21)
+@EnabledOnJre(JRE.JAVA_25)
 class ApplicationIntegrationTest {
 
     @Test

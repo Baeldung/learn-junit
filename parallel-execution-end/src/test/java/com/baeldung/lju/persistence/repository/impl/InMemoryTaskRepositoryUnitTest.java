@@ -48,7 +48,6 @@ class InMemoryTaskRepositoryUnitTest {
         assertEquals(1, tasks.size());
     }
 
-
     @Test
     @ResourceLock("task-repository")
     void givenExistingTask_whenUpdatingItsDescription_thenTaskWasUpdated() {

@@ -11,6 +11,7 @@ class ClassDisplayNameOrderUnitTest {
     @Nested
     @DisplayName("1. Class One")
     class One {
+
         @Test
         void whenRunningExampleOne_thenObserveConfiguredOrder() {
             System.out.println("Running whenRunningExampleOne_thenObserveConfiguredOrder");
@@ -21,6 +22,7 @@ class ClassDisplayNameOrderUnitTest {
     @Nested
     @DisplayName("2. Class Two")
     class Two {
+
         @Test
         void whenRunningExampleTwo_thenObserveConfiguredOrder() {
             System.out.println("Running whenRunningExampleTwo_thenObserveConfiguredOrder");
@@ -31,6 +33,7 @@ class ClassDisplayNameOrderUnitTest {
     @Nested
     @DisplayName("3. Class Three")
     class Three {
+
         @Test
         void whenRunningExampleThree_thenObserveConfiguredOrder() {
             System.out.println("Running whenRunningExampleThree_thenObserveConfiguredOrder");

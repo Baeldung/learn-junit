@@ -18,7 +18,7 @@ class InMemoryCampaignRepositoryUnitTest {
     @Test
     @Tag("fast")
     void givenEmptyDataSource_whenFindAllCampaigns_thenEmptyListRertrieved() {
-        // given 
+        // given
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 
         // when
@@ -31,7 +31,7 @@ class InMemoryCampaignRepositoryUnitTest {
     @Test
     @Tag("fast")
     void givenExistingCampaign_whenFindById_thenCampaignRertrieved() {
-        // given 
+        // given
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>(Arrays.asList(existingCampaign)));
@@ -45,7 +45,7 @@ class InMemoryCampaignRepositoryUnitTest {
 
     @Test
     void givenExistingCampaign_whenFindByNonExistingId_thenNoCampaignRertrieved() {
-        // given 
+        // given
         Campaign existingCampaign = new Campaign("C-1-CODE", "Campaign 1", "Campaign 1 Description");
         existingCampaign.setId(1L);
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>(Arrays.asList(existingCampaign)));
@@ -59,7 +59,7 @@ class InMemoryCampaignRepositoryUnitTest {
 
     @Test
     void givenEmptyDataSource_whenSave_thenCampaignIsAssignedId() {
-        // given 
+        // given
         InMemoryCampaignRepository campaignRepository = new InMemoryCampaignRepository(new HashSet<>());
 
         // when

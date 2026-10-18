@@ -10,6 +10,7 @@ class ClassRandomOrderUnitTest {
 
     @Nested
     class One {
+
         @Test
         void whenRunningExampleOne_thenObserveConfiguredOrder() {
             System.out.println("Running whenRunningExampleOne_thenObserveConfiguredOrder");
@@ -19,6 +20,7 @@ class ClassRandomOrderUnitTest {
 
     @Nested
     class Two {
+
         @Test
         void whenRunningExampleTwo_thenObserveConfiguredOrder() {
             System.out.println("Running whenRunningExampleTwo_thenObserveConfiguredOrder");
@@ -28,6 +30,7 @@ class ClassRandomOrderUnitTest {
 
     @Nested
     class Three {
+
         @Test
         void whenRunningExampleThree_thenObserveConfiguredOrder() {
             System.out.println("Running whenRunningExampleThree_thenObserveConfiguredOrder");
