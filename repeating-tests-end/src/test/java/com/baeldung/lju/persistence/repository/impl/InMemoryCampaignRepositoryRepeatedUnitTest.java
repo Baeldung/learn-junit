@@ -8,6 +8,7 @@ import org.junit.jupiter.api.RepetitionInfo;
 import com.baeldung.lju.domain.model.Campaign;
 
 class InMemoryCampaignRepositoryRepeatedUnitTest {
+
     @RepeatedTest(5)
     void whenSavingCampaignRepeatedly_thenShouldAssignIds() {
         InMemoryCampaignRepository repository = new InMemoryCampaignRepository();
@@ -16,7 +17,7 @@ class InMemoryCampaignRepositoryRepeatedUnitTest {
         Campaign savedCampaign = repository.save(campaign);
 
         assertNotNull(savedCampaign.getId(),
-                "Campaign ID should be assigned in repeated test");
+            "Campaign ID should be assigned in repeated test");
     }
 
     @RepeatedTest(value = 5, name = "Test run {currentRepetition}/{totalRepetitions}")
@@ -27,7 +28,7 @@ class InMemoryCampaignRepositoryRepeatedUnitTest {
         Campaign savedCampaign = repository.save(campaign);
 
         assertNotNull(savedCampaign.getId(),
-                "Campaign ID should be assigned in repeated test");
+            "Campaign ID should be assigned in repeated test");
     }
 
     @RepeatedTest(value = 5, name = "Test run {currentRepetition}/{totalRepetitions}")
@@ -40,7 +41,7 @@ class InMemoryCampaignRepositoryRepeatedUnitTest {
         Campaign savedCampaign = repository.save(campaign);
 
         assertNotNull(savedCampaign.getId(),
-                "Campaign ID should be assigned in repeated test");
+            "Campaign ID should be assigned in repeated test");
     }
 
     /*

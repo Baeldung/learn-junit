@@ -29,8 +29,10 @@ class StaticCodeAnalysisTest {
         return DynamicTest.dynamicTest(
             String.format("%s < %s lines", javaFile.getName(), MAX_FILE_LENGTH),
             () -> {
-                long fileLength = Files.lines(javaFile.toPath()).count();
-                assertTrue(fileLength < MAX_FILE_LENGTH);
+                try (Stream<String> lines = Files.lines(javaFile.toPath())) {
+                    long fileLength = lines.count();
+                    assertTrue(fileLength < MAX_FILE_LENGTH);
+                }
             }
         );
     }
@@ -51,8 +53,7 @@ class StaticCodeAnalysisTest {
                 if (file.getName().endsWith(".java")) {
                     return Stream.of(verifyFileLength(file));
                 } else {
-                    return Stream.of(file.listFiles())
-                        .flatMap(StaticCodeAnalysisTest::verifyAllFromFolder);
+                    return verifyAllFromFolder(file);
                 }
             });
     }
