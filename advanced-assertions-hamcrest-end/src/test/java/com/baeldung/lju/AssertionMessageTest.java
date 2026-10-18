@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AssertionMessageTest {
+
     @Test
     void whenCreatingCode_thenSetCorrectCodeAndTasks() {
         Campaign campaign = new Campaign("code", "name", "description");

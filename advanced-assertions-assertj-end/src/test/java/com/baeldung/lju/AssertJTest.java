@@ -49,8 +49,7 @@ class AssertJTest {
             "foo", 2,
             "bar", 4,
             "qux", 6,
-            "buzz", 8
-        );
+            "buzz", 8);
 
         assertThat(aMap)
             .containsEntry("foo", 2)

@@ -37,13 +37,12 @@ class InMemoryTaskRepositoryTest {
         List<Task> tasks = repo.findByNameContainingAndAssigneeId("BACKEND", 100L);
 
         // then
-       assertThat(tasks, hasSize(2));
-       assertThat(tasks, containsInAnyOrder(task1, task2));
+        assertThat(tasks, hasSize(2));
+        assertThat(tasks, containsInAnyOrder(task1, task2));
 
-       assertThat(tasks, everyItem(allOf(
-           hasProperty("assignee", hasProperty("id", is(100L))),
-           hasProperty("name", startsWith("BACKEND")),
-           not(hasProperty("name", containsString("FRONTEND")))
-       )));
+        assertThat(tasks, everyItem(allOf(
+            hasProperty("assignee", hasProperty("id", is(100L))),
+            hasProperty("name", startsWith("BACKEND")),
+            not(hasProperty("name", containsString("FRONTEND"))))));
     }
 }

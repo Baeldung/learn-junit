@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-
 class HamcrestTest {
 
     @Test
@@ -31,8 +30,7 @@ class HamcrestTest {
 
         assertThat(aDate, allOf(
             greaterThan(LocalDateTime.now().minusDays(1)),
-            lessThan(LocalDateTime.now().plusDays(1))
-        ));
+            lessThan(LocalDateTime.now().plusDays(1))));
     }
 
 }
